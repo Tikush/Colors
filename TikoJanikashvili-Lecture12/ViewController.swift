@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var colorButton: UIButton!
+    @IBOutlet weak var customButton: UIButton!
     
     
     // MARK: - Life Cycle
@@ -26,12 +27,19 @@ class ViewController: UIViewController {
     
     private func setup() {
         colorButton.layer.cornerRadius = 10
+        customButton.layer.cornerRadius = 10
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ColorViewController" {
             if let vc = segue.destination as? ColorViewController {
                 vc.delegate = self
+            }
+        }
+         
+        if segue.identifier == "CustomColorViewController" {
+            if let vc = segue.destination as? CustomColorViewController {
+                vc.titleLabel = "ღილაკის ფერის არჩევა"
             }
         }
     }

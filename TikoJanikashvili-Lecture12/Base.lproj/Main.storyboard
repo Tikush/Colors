@@ -30,7 +30,18 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3B7-Wu-LrM" kind="presentation" identifier="ColorViewController" id="Ze1-Hx-tN1"/>
+                                    <segue destination="3B7-Wu-LrM" kind="show" identifier="ColorViewController" id="1vd-ES-PFp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6z-Jw-RGg">
+                                <rect key="frame" x="96" y="315" width="128" height="61.5"/>
+                                <color key="backgroundColor" red="0.088381602640000001" green="0.35296337280000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click Custom Button">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="9oY-Rp-s1s" kind="show" identifier="CustomColorViewController" id="glN-ez-j5g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,21 +50,27 @@
                         <constraints>
                             <constraint firstItem="ESE-G0-27l" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="0VN-ir-iIH"/>
                             <constraint firstItem="ESE-G0-27l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bfd-qg-H9Y"/>
+                            <constraint firstItem="H6z-Jw-RGg" firstAttribute="height" secondItem="ESE-G0-27l" secondAttribute="height" multiplier="1.6" id="G3Z-1y-hhF"/>
+                            <constraint firstItem="H6z-Jw-RGg" firstAttribute="centerX" secondItem="ESE-G0-27l" secondAttribute="centerX" id="K6f-eE-uKR"/>
                             <constraint firstItem="ESE-G0-27l" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="Lxk-C4-6Hu"/>
+                            <constraint firstItem="H6z-Jw-RGg" firstAttribute="top" secondItem="ESE-G0-27l" secondAttribute="bottom" constant="56" id="MN9-fc-gHg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fQU-b4-N7c" secondAttribute="trailing" constant="24" id="PDL-xh-JAq"/>
+                            <constraint firstItem="H6z-Jw-RGg" firstAttribute="width" secondItem="ESE-G0-27l" secondAttribute="width" id="kkr-Nr-sV7"/>
                             <constraint firstItem="fQU-b4-N7c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="pVa-Ok-8Qg"/>
                             <constraint firstItem="fQU-b4-N7c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="qgY-4f-p21"/>
                             <constraint firstItem="ESE-G0-27l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sBJ-Oy-aqh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2sc-Dx-8HG"/>
                     <connections>
                         <outlet property="colorButton" destination="ESE-G0-27l" id="C94-3M-4kB"/>
                         <outlet property="contentView" destination="8bC-Xf-vdC" id="7X7-a8-lLa"/>
+                        <outlet property="customButton" destination="H6z-Jw-RGg" id="dU0-Pl-hhW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="80"/>
+            <point key="canvasLocation" x="1860" y="80"/>
         </scene>
         <!--Color View Controller-->
         <scene sceneID="6yj-ZC-x9p">
@@ -231,13 +248,54 @@
                             <constraint firstItem="EIw-Id-VTC" firstAttribute="leading" secondItem="GX5-l9-Vuh" secondAttribute="trailing" constant="10" id="vMt-5a-35F"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="x9m-QT-eKg"/>
                     <connections>
                         <outlet property="contentView" destination="22i-mO-66K" id="HIX-Ly-vDB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0b-qf-VO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="80"/>
+            <point key="canvasLocation" x="2715" y="-233.75"/>
+        </scene>
+        <!--Custom Color View Controller-->
+        <scene sceneID="X9E-vx-JUc">
+            <objects>
+                <viewController storyboardIdentifier="CustomColorViewController" id="9oY-Rp-s1s" customClass="CustomColorViewController" customModule="TikoJanikashvili_Lecture12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oby-Dp-YpW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNX-dY-6Yx">
+                                <rect key="frame" x="24" y="57" width="272" height="138"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R4-FF-YPN">
+                                <rect key="frame" x="24" y="269" width="272" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xNS-xU-bvu"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="6R4-FF-YPN" firstAttribute="height" secondItem="yNX-dY-6Yx" secondAttribute="height" multiplier="0.927536" id="Ard-gr-r81"/>
+                            <constraint firstItem="yNX-dY-6Yx" firstAttribute="top" secondItem="xNS-xU-bvu" secondAttribute="top" constant="57" id="BYQ-xZ-YX4"/>
+                            <constraint firstItem="xNS-xU-bvu" firstAttribute="bottom" secondItem="6R4-FF-YPN" secondAttribute="bottom" constant="63" id="Chl-gd-Apm"/>
+                            <constraint firstItem="6R4-FF-YPN" firstAttribute="leading" secondItem="xNS-xU-bvu" secondAttribute="leading" constant="24" id="GKy-nA-ttn"/>
+                            <constraint firstItem="yNX-dY-6Yx" firstAttribute="leading" secondItem="xNS-xU-bvu" secondAttribute="leading" constant="24" id="Ugw-w1-Xd3"/>
+                            <constraint firstItem="xNS-xU-bvu" firstAttribute="trailing" secondItem="6R4-FF-YPN" secondAttribute="trailing" constant="24" id="eLV-zn-OYh"/>
+                            <constraint firstItem="yNX-dY-6Yx" firstAttribute="height" secondItem="Oby-Dp-YpW" secondAttribute="height" multiplier="0.3" id="jKj-Qo-7Hf"/>
+                            <constraint firstItem="xNS-xU-bvu" firstAttribute="trailing" secondItem="yNX-dY-6Yx" secondAttribute="trailing" constant="24" id="qHR-y7-gi6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="duJ-ns-UiR"/>
+                    <connections>
+                        <outlet property="changingButtonView" destination="yNX-dY-6Yx" id="ddf-T3-h59"/>
+                        <outlet property="changingView" destination="6R4-FF-YPN" id="0yl-Jd-Fi3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxF-Z5-HWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="490"/>
         </scene>
     </scenes>
     <resources>
@@ -247,8 +305,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

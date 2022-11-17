@@ -29,12 +29,12 @@ class ColorViewController: UIViewController {
         setup()
     }
     
-    
     // MARK: - Change corner of view
     
     private func setup() {
         contentView.layer.cornerRadius = 10
     }
+    
     
     // MARK: - IBActions
     
